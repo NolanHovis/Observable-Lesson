@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row" style="display: flex; justify-content: space-between">
+    <div class="col-md-5">
+      <h3>Pick Candy for your Bucket</h3>
+    </div>
+    <div class="col-md-5">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Bucket</h3>
+        </div>
+        <div class="col-md-6" style="text-align: right">
+          <button
+            type="button"
+            class="btn btn-danger"
+            onclick="location.reload()"
+          >
+            Dump Bucket
+          </button>
+        </div>
+      </div>
+    </div>
+    <hr />
+  </div>
+  <div class="row" style="display: flex; justify-content: space-between">
+    <div class="col-md-5">
+      <div
+        class="card"
+        *ngFor="let candy of candyList; let i = index"
+        style="cursor: pointer"
+        (click)="onClickCandy(candy)"
+      >
+        <h4 class="card-title">{{ candy }}</h4>
+      </div>
+    </div>
+    <div
+      class="col-md-5"
+      style="
+        background-color: rgba(110, 74, 29, 0.473);
+        border-bottom: solid 7px rgb(110, 73, 29);
+        border-left: solid 7px rgb(110, 73, 29);
+        border-right: solid 7px rgb(110, 73, 29);
+        border-radius: 0px 0px 40px 40px;
+      "
+    >
+      <div class="card" *ngFor="let bucket of bucket">
+        <h4 class="card-title">{{ bucket }}</h4>
+      </div>
+    </div>
+  </div>
+</div>
