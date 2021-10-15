@@ -1,4 +1,3 @@
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -24,7 +23,6 @@ export class CandyService {
   }
 
   saveCandy(candy) {
-    console.log(candy);
     this.bucket.push(candy);
     console.log(this.bucket.length);
   }
