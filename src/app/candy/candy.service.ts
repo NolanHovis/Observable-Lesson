@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CandyService {
+  bucketLimit = new Subject<number>();
   private candy: string[] = [
     'Snickers',
     'Kit Kat',
@@ -24,7 +26,6 @@ export class CandyService {
 
   saveCandy(candy) {
     this.bucket.push(candy);
-    console.log(this.bucket.length);
   }
 
   getBucket() {
