@@ -5,7 +5,6 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class CandyService {
-  bucketLimit = new Subject<number>();
   private candy: string[] = [
     'Snickers',
     'Kit Kat',
